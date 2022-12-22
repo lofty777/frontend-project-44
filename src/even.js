@@ -8,15 +8,15 @@ const generateRandomNumber = () => {
 
 const even = () => {
   const userName = greeting();
+
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const randomNumber = generateRandomNumber();
     console.log(`Question: ${randomNumber}`);
-    let rightAnswer = 'no';
-    if (randomNumber % 2 === 0) {
-      rightAnswer = 'yes';
-    }
+
+    const rightAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
     const answer = readlineSync.question('Your answer: ');
+
     if (answer === rightAnswer && i < 3) {
       console.log('Correct!');
     } else {
