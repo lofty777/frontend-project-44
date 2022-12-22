@@ -1,3 +1,5 @@
-import greeting from '../src/cli.js';
+#!/usr/bin/env node
 
-greeting();
+import even from '../src/test.js';
+
+even();
