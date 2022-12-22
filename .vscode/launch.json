@@ -8,7 +8,7 @@
         {
             "type": "node",
             "request": "launch",
-            "console": "externalTerminal",
+            // "console": "externalTerminal",
             "name": "test",
             "program": "${workspaceRoot}/cli.js",
             "cwd": "${workspaceRoot}"
