@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import greeting from './cli.js';
+import greeting from '../cli.js';
 import readlineSync from 'readline-sync';
 import { generateRandomNumber } from './even.js';
 

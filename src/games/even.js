@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import greeting from './cli.js';
+import greeting from '../cli.js';
 
 export const generateRandomNumber = () => {
   return Math.round(Math.random() * 100);
