@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 import greeting from './cli.js';
 
-const generateRandomNumber = () => {
+export const generateRandomNumber = () => {
   return Math.round(Math.random() * 100);
 };
 
