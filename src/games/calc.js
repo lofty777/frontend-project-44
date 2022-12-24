@@ -13,12 +13,22 @@ const calc = () => {
     const randomOperator = _.sample(operators);
     const randomNumber1 = generateRandomNumber();
     const randomNumber2 = generateRandomNumber();
-
+    let rightAnswer;
     console.log(
       `Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`
     );
+    switch (randomOperator) {
+      case '+':
+        rightAnswer = randomNumber1 + randomNumber2;
+        break;
+      case '-':
+        rightAnswer = randomNumber1 - randomNumber2;
+        break;
 
-    const rightAnswer = eval(randomNumber1 + randomOperator + randomNumber2);
+      default:
+        rightAnswer = randomNumber1 * randomNumber2;
+    }
+
     const answer = +readlineSync.question('Your answer: ');
 
     if (answer === rightAnswer && i < 3) {

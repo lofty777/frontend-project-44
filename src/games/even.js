@@ -5,11 +5,12 @@ import greeting from '../cli.js';
 export const generateRandomNumber = () => {
   return Math.round(Math.random() * 100);
 };
+const question = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const even = () => {
   const userName = greeting();
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(question);
   for (let i = 0; i < 3; i += 1) {
     const randomNumber = generateRandomNumber();
     console.log(`Question: ${randomNumber}`);
