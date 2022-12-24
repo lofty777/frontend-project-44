@@ -1,30 +1,18 @@
 import readlineSync from 'readline-sync';
-import { greeting } from '../helper.js';
 import { generateRandomNumber } from '../helper.js';
-
-const question = 'Answer "yes" if the number is even, otherwise answer "no".';
+import baseOfGames from '../index.js';
 
 const even = () => {
-  const userName = greeting();
-
-  console.log(question);
-  for (let i = 0; i < 3; i += 1) {
+  const gameQuestion =
+    'Answer "yes" if the number is even, otherwise answer "no".';
+  const gameTask = () => {
     const randomNumber = generateRandomNumber();
+    let rightAnswer;
     console.log(`Question: ${randomNumber}`);
 
-    const rightAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === rightAnswer && i < 3) {
-      console.log('Correct!');
-    } else {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`
-      );
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+    return (rightAnswer = randomNumber % 2 === 0 ? 'yes' : 'no');
+  };
+  baseOfGames(gameQuestion, gameTask);
 };
 
 export default even;
