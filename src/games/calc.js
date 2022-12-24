@@ -1,16 +1,12 @@
-import _ from 'lodash';
-import greeting from '../cli.js';
-import readlineSync from 'readline-sync';
-import { generateRandomNumber } from './even.js';
-
-const operators = ['+', '-', '*'];
-const question = 'What is the result of the expression?';
+import { generateRandomNumber } from '../helper.js';
+import baseOfGames from '../index.js';
 
 const calc = () => {
-  const userName = greeting();
-  console.log(question);
-  for (let i = 0; i < 3; i += 1) {
-    const randomOperator = _.sample(operators);
+  const gameQuestion = 'What is the result of the expression?';
+  const gameTask = () => {
+    const operator = ['+', '-', '*'];
+    const randomIndex = Math.floor(Math.random() * operator.length);
+    const randomOperator = operator[randomIndex];
     const randomNumber1 = generateRandomNumber();
     const randomNumber2 = generateRandomNumber();
     let rightAnswer;
@@ -28,19 +24,9 @@ const calc = () => {
       default:
         rightAnswer = randomNumber1 * randomNumber2;
     }
-
-    const answer = +readlineSync.question('Your answer: ');
-
-    if (answer === rightAnswer && i < 3) {
-      console.log('Correct!');
-    } else {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`
-      );
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+    return rightAnswer.toString();
+  };
+  baseOfGames(gameQuestion, gameTask);
 };
 
 export default calc;

@@ -1,10 +1,7 @@
 import readlineSync from 'readline-sync';
+import { greeting } from '../helper.js';
+import { generateRandomNumber } from '../helper.js';
 
-import greeting from '../cli.js';
-
-export const generateRandomNumber = () => {
-  return Math.round(Math.random() * 100);
-};
 const question = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const even = () => {

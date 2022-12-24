@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 
-const greeting = () => {
-  // console.log('node bin/brain-games.js');
+export const greeting = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log('Hello ' + userName + '!');
   return userName;
 };
 
-export default greeting;
+export const generateRandomNumber = () => {
+  return Math.round(Math.random() * 25);
+};
