@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { generateRandomNumber } from '../helper.js';
 import baseOfGames from '../index.js';
 
@@ -10,7 +9,7 @@ const even = () => {
     let rightAnswer;
     console.log(`Question: ${randomNumber}`);
 
-    return (rightAnswer = randomNumber % 2 === 0 ? 'yes' : 'no');
+    return randomNumber % 2 === 0 ? 'yes' : 'no';
   };
   baseOfGames(gameQuestion, gameTask);
 };
