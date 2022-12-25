@@ -3,6 +3,7 @@ import baseOfGames from '../index.js';
 
 const calc = () => {
   const gameQuestion = 'What is the result of the expression?';
+
   const gameTask = () => {
     const operator = ['+', '-', '*'];
     const randomIndex = Math.floor(Math.random() * operator.length);
@@ -26,6 +27,7 @@ const calc = () => {
     }
     return rightAnswer.toString();
   };
+
   baseOfGames(gameQuestion, gameTask);
 };
 

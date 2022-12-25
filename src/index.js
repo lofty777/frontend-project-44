@@ -9,7 +9,13 @@ const baseOfGames = (gameQuestion, task) => {
   for (let i = 0; i < 3; i += 1) {
     const rightAnswer = task();
 
-    const answer = readlineSync.question('Your answer: ');
+    let answer = readlineSync.question('Your answer: ');
+    // console.log(typeof answer);
+    // console.log(typeof rightAnswer);
+
+    if (typeof rightAnswer === 'number') {
+      answer = +answer;
+    }
 
     if (answer === rightAnswer) {
       console.log('Correct!');
