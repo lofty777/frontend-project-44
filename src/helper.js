@@ -41,6 +41,7 @@ export const generateProgression = (
     i += progressionDifference
   ) {
     arr.push(i);
+    ``;
   }
   arr[4] = '..';
   console.log(arr.join(' '));
