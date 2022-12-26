@@ -8,26 +8,27 @@ export const greeting = () => {
 };
 
 export const generateRandomNumber = () => {
-  return Math.round(Math.random() * 5);
+  return Math.ceil(Math.random() * 50);
 };
 
-const generateProgressionDifference = () => {
-  return Math.round(Math.random() * 10);
+export const generateFirstNumberProgression = () => {
+  return Math.ceil(Math.random() * 5);
 };
 
-const firstNumberProgression = generateRandomNumber();
-const progressionDifference = generateProgressionDifference();
+export const generateProgressionDifference = () => {
+  return Math.floor(Math.random() * 10);
+};
 
-// export const greatestCommonDivisor = (a, b) => {
-//   if (a == 0) return b;
+export const greatestCommonDivisor = (a, b) => {
+  if (a == 0) return b;
 
-//   while (b != 0) {
-//     if (a > b) a = a - b;
-//     else b = b - a;
-//   }
+  while (b != 0) {
+    if (a > b) a = a - b;
+    else b = b - a;
+  }
 
-//   return a;
-// };
+  return a;
+};
 
 export const generateProgression = (
   firstNumberProgression,
@@ -35,16 +36,19 @@ export const generateProgression = (
   length
 ) => {
   const arr = [];
+  let rightAnswer;
   for (
     let i = firstNumberProgression;
     i < progressionDifference * length;
     i += progressionDifference
   ) {
     arr.push(i);
-    ``;
   }
-  arr[4] = '..';
-  console.log(arr.join(' '));
-};
+  const randomIndex = Math.ceil(Math.random() * arr.length);
+  console.log(randomIndex);
+  rightAnswer = arr[randomIndex];
+  console.log(arr[randomIndex]);
+  arr[randomIndex] = '..';
 
-generateProgression(firstNumberProgression, progressionDifference, 10);
+  return arr.join(' ');
+};

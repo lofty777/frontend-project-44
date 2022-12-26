@@ -1,16 +1,29 @@
-import { generateRandomNumber } from '../helper.js';
+import { generateFirstNumberProgression } from '../helper.js';
+import { generateProgressionDifference } from '../helper.js';
+import { generateProgression } from '../helper.js';
 import baseOfGames from '../index.js';
-import { greatestCommonDivisor } from '../helper.js';
 
 const progression = () => {
   const gameQuestion = 'What number is missing in the progression?';
 
   const gameTask = () => {
-    let randomNumber1 = generateRandomNumber();
-    let randomNumber2 = generateRandomNumber();
-    console.log(`Question: ${randomNumber1} ${randomNumber2}`);
+    const firstNumberProgression = generateFirstNumberProgression();
+    const progressionDifference = generateProgressionDifference();
+    const arr = [];
+    let rightAnswer;
+    for (
+      let i = firstNumberProgression;
+      i < progressionDifference * 10;
+      i += progressionDifference
+    ) {
+      arr.push(i);
+    }
+    const randomIndex = Math.ceil(Math.random() * arr.length);
+    rightAnswer = arr[randomIndex];
+    arr[randomIndex] = '..';
 
-    return greatestCommonDivisor(randomNumber1, randomNumber2);
+    console.log(`Question: ${arr.join(' ')}`);
+    return rightAnswer;
   };
   baseOfGames(gameQuestion, gameTask);
 };
