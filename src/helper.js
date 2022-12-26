@@ -8,16 +8,42 @@ export const greeting = () => {
 };
 
 export const generateRandomNumber = () => {
-  return Math.round(Math.random() * 50);
+  return Math.round(Math.random() * 5);
 };
 
-export const greatestCommonDivisor = (a, b) => {
-  if (a == 0) return b;
+const generateProgressionDifference = () => {
+  return Math.round(Math.random() * 10);
+};
 
-  while (b != 0) {
-    if (a > b) a = a - b;
-    else b = b - a;
+const firstNumberProgression = generateRandomNumber();
+const progressionDifference = generateProgressionDifference();
+
+// export const greatestCommonDivisor = (a, b) => {
+//   if (a == 0) return b;
+
+//   while (b != 0) {
+//     if (a > b) a = a - b;
+//     else b = b - a;
+//   }
+
+//   return a;
+// };
+
+export const generateProgression = (
+  firstNumberProgression,
+  progressionDifference,
+  length
+) => {
+  const arr = [];
+  for (
+    let i = firstNumberProgression;
+    i < progressionDifference * length;
+    i += progressionDifference
+  ) {
+    arr.push(i);
   }
-
-  return a;
+  arr[4] = '..';
+  console.log(arr.join(' '));
 };
+
+generateProgression(firstNumberProgression, progressionDifference, 10);
