@@ -8,7 +8,6 @@ const progression = () => {
     const firstNumberProgression = generateRandomNumber(5);
     const progressionDifference = generateRandomNumber(10);
     const arr = [];
-    let rightAnswer;
     for (
       let i = firstNumberProgression;
       i < progressionDifference * 10;
@@ -17,7 +16,7 @@ const progression = () => {
       arr.push(i);
     }
     const randomIndex = Math.floor(Math.random() * arr.length);
-    rightAnswer = arr[randomIndex];
+    const rightAnswer = arr[randomIndex];
     arr[randomIndex] = '..';
 
     console.log(`Question: ${arr.join(' ')}`);
