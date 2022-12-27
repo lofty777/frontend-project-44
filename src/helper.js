@@ -22,23 +22,13 @@ export const greatestCommonDivisor = (a, b) => {
   return a;
 };
 
-export const generateProgression = (
-  firstNumberProgression,
-  progressionDifference,
-  length
-) => {
-  const arr = [];
-  let rightAnswer;
-  for (
-    let i = firstNumberProgression;
-    i < progressionDifference * length;
-    i += progressionDifference
-  ) {
-    arr.push(i);
-  }
-  const randomIndex = Math.ceil(Math.random() * arr.length);
-  rightAnswer = arr[randomIndex];
-  arr[randomIndex] = '..';
+export const isPrime = (num) => {
+  if (num <= 1) return 'no';
 
-  return arr.join(' ');
+  for (let i = 2; i * i <= num; i++) {
+    if (num % i == 0) return 'no';
+  }
+  return 'yes';
 };
+
+// console.log(isPrime(80));
