@@ -7,12 +7,12 @@ export const greeting = () => {
   return userName;
 };
 
-export const generateRandomNumber = (n = 100) => {
-  return Math.ceil(Math.random() * n);
-};
+export const generateRandomNumber = (n = 100) => Math.ceil(Math.random() * n);
 
 export const greatestCommonDivisor = (a, b) => {
-  if (a === 0) return b;
+  if (a === 0) {
+    return b;
+  }
 
   while (b !== 0) {
     if (a > b) {
