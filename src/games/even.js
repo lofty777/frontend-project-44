@@ -2,7 +2,9 @@ import { generateRandomNumber } from '../helper.js';
 import baseOfGames from '../index.js';
 
 const even = () => {
-  const gameQuestion = `Answer "yes" if the number is even, otherwise answer "no".`;
+  // eslint-disable-next-line no-use-before-define
+  const gameQuestion =
+    'Answer "yes" if the number is even, otherwise answer "no".';
 
   const gameTask = () => {
     const randomNumber = generateRandomNumber();
