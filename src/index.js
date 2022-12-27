@@ -21,7 +21,7 @@ const baseOfGames = (gameQuestion, task) => {
       console.log('Correct!');
     } else {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`
+        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`,
       );
       return;
     }

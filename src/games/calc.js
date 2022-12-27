@@ -12,7 +12,7 @@ const calc = () => {
     const randomNumber2 = generateRandomNumber(25);
     let rightAnswer;
     console.log(
-      `Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`
+      `Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`,
     );
     switch (randomOperator) {
       case '+':
