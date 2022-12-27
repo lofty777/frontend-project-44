@@ -1,5 +1,4 @@
-import { generateFirstNumberProgression } from '../helper.js';
-import { generateProgressionDifference } from '../helper.js';
+import { generateRandomNumber } from '../helper.js';
 import { generateProgression } from '../helper.js';
 import baseOfGames from '../index.js';
 
@@ -7,8 +6,8 @@ const progression = () => {
   const gameQuestion = 'What number is missing in the progression?';
 
   const gameTask = () => {
-    const firstNumberProgression = generateFirstNumberProgression();
-    const progressionDifference = generateProgressionDifference();
+    const firstNumberProgression = generateRandomNumber(5);
+    const progressionDifference = generateRandomNumber(10);
     const arr = [];
     let rightAnswer;
     for (

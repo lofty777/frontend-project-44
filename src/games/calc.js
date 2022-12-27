@@ -8,8 +8,8 @@ const calc = () => {
     const operator = ['+', '-', '*'];
     const randomIndex = Math.floor(Math.random() * operator.length);
     const randomOperator = operator[randomIndex];
-    const randomNumber1 = generateRandomNumber();
-    const randomNumber2 = generateRandomNumber();
+    const randomNumber1 = generateRandomNumber(25);
+    const randomNumber2 = generateRandomNumber(25);
     let rightAnswer;
     console.log(
       `Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`
@@ -25,7 +25,7 @@ const calc = () => {
       default:
         rightAnswer = randomNumber1 * randomNumber2;
     }
-    return rightAnswer.toString();
+    return rightAnswer;
   };
 
   baseOfGames(gameQuestion, gameTask);

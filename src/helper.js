@@ -7,16 +7,8 @@ export const greeting = () => {
   return userName;
 };
 
-export const generateRandomNumber = () => {
-  return Math.ceil(Math.random() * 50);
-};
-
-export const generateFirstNumberProgression = () => {
-  return Math.ceil(Math.random() * 5);
-};
-
-export const generateProgressionDifference = () => {
-  return Math.floor(Math.random() * 10);
+export const generateRandomNumber = (n = 100) => {
+  return Math.ceil(Math.random() * n);
 };
 
 export const greatestCommonDivisor = (a, b) => {
@@ -45,9 +37,7 @@ export const generateProgression = (
     arr.push(i);
   }
   const randomIndex = Math.ceil(Math.random() * arr.length);
-  console.log(randomIndex);
   rightAnswer = arr[randomIndex];
-  console.log(arr[randomIndex]);
   arr[randomIndex] = '..';
 
   return arr.join(' ');

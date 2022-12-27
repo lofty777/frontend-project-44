@@ -7,7 +7,7 @@ const gcd = () => {
 
   const gameTask = () => {
     let randomNumber1 = generateRandomNumber();
-    let randomNumber2 = generateRandomNumber();
+    let randomNumber2 = generateRandomNumber(50);
     console.log(`Question: ${randomNumber1} ${randomNumber2}`);
 
     return greatestCommonDivisor(randomNumber1, randomNumber2);
