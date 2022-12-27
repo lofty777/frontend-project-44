@@ -12,13 +12,13 @@ export const generateRandomNumber = (n = 100) => {
 };
 
 export const greatestCommonDivisor = (a, b) => {
-  if (a == 0) return b;
+  if (a === 0) return b;
 
-  while (b != 0) {
+  while (b !== 0) {
     if (a > b) {
-      a = a - b;
+      a -= b;
     } else {
-      b = b - a;
+      b -= a;
     }
   }
 
@@ -28,7 +28,7 @@ export const greatestCommonDivisor = (a, b) => {
 export const isPrime = (num) => {
   if (num <= 1) return 'no';
 
-  for (let i = 2; i * i <= num; i++) {
+  for (let i = 2; i * i <= num; i += 1) {
     if (num % i == 0) return 'no';
   }
   return 'yes';

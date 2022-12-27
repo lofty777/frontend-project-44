@@ -1,5 +1,4 @@
-import { generateRandomNumber } from '../helper.js';
-import { isPrime } from '../helper.js';
+import { generateRandomNumber, isPrime } from '../helper.js';
 import baseOfGames from '../index.js';
 
 const prime = () => {
