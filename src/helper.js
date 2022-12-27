@@ -15,8 +15,11 @@ export const greatestCommonDivisor = (a, b) => {
   if (a == 0) return b;
 
   while (b != 0) {
-    if (a > b) a = a - b;
-    else b = b - a;
+    if (a > b) {
+      a = a - b;
+    } else {
+      b = b - a;
+    }
   }
 
   return a;
@@ -30,5 +33,3 @@ export const isPrime = (num) => {
   }
   return 'yes';
 };
-
-// console.log(isPrime(80));

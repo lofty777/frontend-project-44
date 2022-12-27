@@ -10,7 +10,7 @@ const prime = () => {
     const randomNumber = generateRandomNumber();
     console.log(`Question: ${randomNumber}`);
 
-    return isPrime(generateRandomNumber);
+    return isPrime(randomNumber);
   };
   baseOfGames(gameQuestion, gameTask);
 };
