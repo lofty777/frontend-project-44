@@ -1,5 +1,4 @@
 import { generateRandomNumber } from '../helper.js';
-import { generateProgression } from '../helper.js';
 import baseOfGames from '../index.js';
 
 const progression = () => {
