@@ -13,16 +13,17 @@ export const greatestCommonDivisor = (a, b) => {
   if (a === 0) {
     return b;
   }
-
-  while (b !== 0) {
-    if (a > b) {
-      a -= b;
+  let x = a;
+  let y = b;
+  while (y !== 0) {
+    if (x > y) {
+      x -= y;
     } else {
-      b -= a;
+      y -= x;
     }
   }
 
-  return a;
+  return x;
 };
 
 export const isPrime = (num) => {
