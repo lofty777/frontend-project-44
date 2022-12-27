@@ -8,7 +8,7 @@ export const greeting = () => {
 };
 
 export const generateRandomNumber = (n = 100) => {
-  return Math.ceil(Math.random() * n);
+  return Math.floor(Math.random() * n);
 };
 
 export const greatestCommonDivisor = (a, b) => {

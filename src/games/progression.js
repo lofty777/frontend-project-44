@@ -16,7 +16,7 @@ const progression = () => {
     ) {
       arr.push(i);
     }
-    const randomIndex = Math.ceil(Math.random() * arr.length);
+    const randomIndex = Math.floor(Math.random() * arr.length);
     rightAnswer = arr[randomIndex];
     arr[randomIndex] = '..';
 
