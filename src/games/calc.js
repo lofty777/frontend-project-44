@@ -21,6 +21,7 @@ const calc = () => {
   const gameQuestion = 'What is the result of the expression?';
 
   const gameTask = () => {
+    console.log(gameQuestion);
     const operators = ['+', '-', '*'];
     const randomIndex = Math.floor(Math.random() * operators.length);
     console.log(randomIndex);
@@ -33,7 +34,7 @@ const calc = () => {
     return calculation(firstNumber, secondNumber, randomOperator);
   };
 
-  baseOfGames(gameQuestion, gameTask);
+  baseOfGames(gameTask);
 };
 
 export default calc;

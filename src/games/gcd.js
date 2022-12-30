@@ -22,13 +22,14 @@ const gcd = () => {
   const gameQuestion = 'Find the greatest common divisor of given numbers.';
 
   const gameTask = () => {
+    console.log(gameQuestion);
     const firstNumber = generateRandomNumber();
     const secondNumber = generateRandomNumber(50);
     console.log(`Question: ${firstNumber} ${secondNumber}`);
 
     return greatestCommonDivisor(firstNumber, secondNumber);
   };
-  baseOfGames(gameQuestion, gameTask);
+  baseOfGames(gameTask);
 };
 
 export default gcd;

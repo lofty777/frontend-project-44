@@ -5,6 +5,7 @@ const progression = () => {
   const gameQuestion = 'What number is missing in the progression?';
 
   const gameTask = () => {
+    console.log(gameQuestion);
     const firstNumberProgression = generateRandomNumber(5);
     const progressionDifference = generateRandomNumber(10);
     const arr = [];
@@ -22,7 +23,7 @@ const progression = () => {
     console.log(`Question: ${arr.join(' ')}`);
     return rightAnswer;
   };
-  baseOfGames(gameQuestion, gameTask);
+  baseOfGames(gameTask);
 };
 
 export default progression;

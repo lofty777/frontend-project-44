@@ -12,5 +12,3 @@ export const greeting = () => {
 };
 
 export const generateRandomNumber = (n = 100) => Math.ceil(Math.random() * n);
-
-

@@ -1,10 +1,8 @@
 import readlineSync from 'readline-sync';
 import { greeting } from './helper.js';
 
-const baseOfGames = (gameQuestion, task) => {
+const baseOfGames = (task) => {
   const userName = greeting();
-
-  console.log(gameQuestion);
 
   const GAME_ROUNDS = 3;
   for (let i = 0; i < GAME_ROUNDS; i += 1) {
@@ -23,7 +21,7 @@ const baseOfGames = (gameQuestion, task) => {
       console.log('Correct!');
     } else {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`
+        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`,
       );
       return;
     }
