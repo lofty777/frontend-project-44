@@ -1,31 +1,36 @@
 import { generateRandomNumber } from '../helper.js';
 import baseOfGames from '../index.js';
 
+const calculation = (num1, num2, operator) => {
+  let rightAnswer;
+  switch (operator) {
+    case '+':
+      rightAnswer = num1 + num2;
+      break;
+    case '-':
+      rightAnswer = num1 - num2;
+      break;
+
+    default:
+      rightAnswer = num1 * num2;
+  }
+  return rightAnswer;
+};
+
 const calc = () => {
   const gameQuestion = 'What is the result of the expression?';
 
   const gameTask = () => {
-    const operator = ['+', '-', '*'];
-    const randomIndex = Math.floor(Math.random() * operator.length);
-    const randomOperator = operator[randomIndex];
-    const randomNumber1 = generateRandomNumber(25);
-    const randomNumber2 = generateRandomNumber(25);
-    let rightAnswer;
+    const operators = ['+', '-', '*'];
+    const randomIndex = Math.floor(Math.random() * operators.length);
+    console.log(randomIndex);
+    const randomOperator = operators[randomIndex];
+    const firstNumber = generateRandomNumber(25);
+    const secondNumber = generateRandomNumber(25);
     console.log(
-      `Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`,
+      `Question: ${firstNumber} ${randomOperator} ${secondNumber}`,
     );
-    switch (randomOperator) {
-      case '+':
-        rightAnswer = randomNumber1 + randomNumber2;
-        break;
-      case '-':
-        rightAnswer = randomNumber1 - randomNumber2;
-        break;
-
-      default:
-        rightAnswer = randomNumber1 * randomNumber2;
-    }
-    return rightAnswer;
+    return calculation(firstNumber, secondNumber, randomOperator);
   };
 
   baseOfGames(gameQuestion, gameTask);
