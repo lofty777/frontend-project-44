@@ -8,9 +8,38 @@
 
 ## Description
 
-A set of five brain workout games
+Brain Games. A set of five brain workout games. Spend your time usefully.
 
 ---
+
+
+## Minimum system requirements
+
+Node.js 13.2.0 or higher
+
+---
+
+## Installation:
+
+Attention! Commands must be run from the games directory!
+
+Installing dependencies
+
+```
+make install
+```
+
+Installing a package with games
+
+The following command will be run as root!
+
+```
+make link
+```
+
+---
+
+## Launching games:
 
 https://asciinema.org/connect/5b0f57fb-b6ce-4f9f-ac08-3c17d7e3ef45
 
