@@ -10,9 +10,6 @@ const baseOfGames = (task) => {
 
     let answer = readlineSync.question('Your answer: ');
 
-    console.log(typeof answer);
-    console.log(typeof rightAnswer);
-
     if (typeof rightAnswer === 'number') {
       answer = Number(answer);
     }

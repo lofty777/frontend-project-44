@@ -1,25 +1,25 @@
 import { generateRandomNumber } from '../helper.js';
 import baseOfGames from '../index.js';
 
-const calculation = (num1, num2, operator) => {
+const gameQuestion = 'What is the result of the expression?';
+
+const calculation = (firstNumber, secondNumber, operator) => {
   let rightAnswer;
   switch (operator) {
     case '+':
-      rightAnswer = num1 + num2;
+      rightAnswer = firstNumber + secondNumber;
       break;
     case '-':
-      rightAnswer = num1 - num2;
+      rightAnswer = firstNumber - secondNumber;
       break;
 
     default:
-      rightAnswer = num1 * num2;
+      rightAnswer = firstNumber * secondNumber;
   }
   return rightAnswer;
 };
 
 const calc = () => {
-  const gameQuestion = 'What is the result of the expression?';
-
   const gameTask = () => {
     console.log(gameQuestion);
     const operators = ['+', '-', '*'];

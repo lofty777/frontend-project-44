@@ -1,6 +1,8 @@
 import { generateRandomNumber } from '../helper.js';
 import baseOfGames from '../index.js';
 
+const gameQuestion = 'Find the greatest common divisor of given numbers.';
+
 const greatestCommonDivisor = (a, b) => {
   if (a === 0) {
     return b;
@@ -19,8 +21,6 @@ const greatestCommonDivisor = (a, b) => {
 };
 
 const gcd = () => {
-  const gameQuestion = 'Find the greatest common divisor of given numbers.';
-
   const gameTask = () => {
     console.log(gameQuestion);
     const firstNumber = generateRandomNumber();
